@@ -13,6 +13,11 @@ entry.grid(row=0, column=0, columnspan=3, ipady=2, pady=2)
 def myclick(number):
     entry.insert(tk.END, number)
 
+def backspace():
+    current_text = entry.get()[:-1]
+    entry.delete(0, tk.END)
+    entry.insert(0, current_text)
+
 def equal():
     try:
         y = str(eval(entry.get()))
@@ -89,5 +94,9 @@ button_equal.grid(row=5, column=2)
 button_clear = tk.Button(master=frame, text='Clear', padx=15,
                          pady=6, width=15, command=lambda: clear())
 button_clear.grid(row=6, columnspan=2)
+
+button_backspace = tk.Button(master=frame, text='⌫', padx=15, pady=5,
+                             width=3, command=lambda: backspace())
+button_backspace.grid(row=6, column=2, pady=2)
 
 window.mainloop()
