@@ -65,6 +65,9 @@ root.configure(bg='#F0F0F0')
 bold_font = font.Font(weight='bold')
 stylish_font = font.Font(family='Helvetica', size=14, weight='bold', slant='italic')
 
+heading_label = tk.Label(root, text="Contact Book", font=('Helvetica', 20, 'bold'), bg='#F0F0F0')
+heading_label.pack()
+
 name_label = tk.Label(root, text="Name:", font=stylish_font, bg='#F0F0F0')
 name_label.pack()
 
@@ -89,13 +92,13 @@ address_label.pack()
 address_entry = tk.Entry(root)
 address_entry.pack()
 
-add_button = tk.Button(root, text="Add Contact", command=add_contact, bg='#4CAF50', fg='white', font=bold_font)  
+add_button = tk.Button(root, text="Add Contact", command=add_contact, bg='#4CAF50', fg='white', font=bold_font)
 add_button.pack()
 
-view_button = tk.Button(root, text="View Contacts", command=view_contacts, bg='#2196F3', fg='white', font=bold_font)  
+view_button = tk.Button(root, text="View Contacts", command=view_contacts, bg='#2196F3', fg='white', font=bold_font)
 view_button.pack()
 
-delete_button = tk.Button(root, text="Delete Contact", command=delete_contact, bg='#FF5722', fg='white', font=bold_font) 
+delete_button = tk.Button(root, text="Delete Contact", command=delete_contact, bg='#FF5722', fg='white', font=bold_font)
 delete_button.pack()
 
 feedback_label = tk.Label(root, text="", fg="green", bg='#F0F0F0')
